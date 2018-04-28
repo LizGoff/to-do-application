@@ -8,13 +8,6 @@ app.controller('TaskController', ['$http', function($http) {
     self.tasksList = [];
     self.newTasks = {};
 
-    // self.tasks = [
-    //     {
-    //         'categoryEntry': 'Office',
-    //         'tasksEntry': 'Study more code'
-    //     }
-    // ];
-
     self.getTasksEntry = function() {
         $http({
             method: 'GET',
@@ -25,7 +18,7 @@ app.controller('TaskController', ['$http', function($http) {
             console.log('get response', response.data);
         })
         .catch(function(error){
-            console.log('error on /tasks get', error);
+            console.log('error on /tasks Get', error);
         });
     };
 
@@ -40,9 +33,42 @@ app.controller('TaskController', ['$http', function($http) {
             console.log(response);
         })
         .catch(function(error){
-            console.log('error on /tasks post', error);
+            console.log('error on /tasks Post', error);
         });
     };
+
+    self.deleteTasks = function(deleteTasks) {
+        console.log(self.newTasks);
+        $http({
+            method: "DELETE",
+            url: "/tasks",
+            params: deleteTasks
+        })
+        .then(function(response) {
+            self.getTasksEntry();
+            console.log('response from delete', response);
+        })
+        .catch(function(error) {
+            console.log('error on /tasks DELETE', error);
+        });
+    }
+
+    // self.completeButton = function(completeUpdateSave) {
+    //     console.log(self.newTasks);
+    //     $http({
+    //         method: "PUT",
+    //         url: "/tasks",
+    //         data: completeUpdateSave
+    //     })
+    //     .then(function(response) {
+    //         self.getTasksEntry();
+    //         console.log('response from put', response);
+    //     })
+    //     .catch(function(error) {
+    //         console.log('error on /tasks PUT', error);
+    //     });
+    // }
+
     self.getTasksEntry();
 
 }]);

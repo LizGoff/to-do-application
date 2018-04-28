@@ -3,9 +3,8 @@ const Schema = mongoose.Schema;
 
 const TasksSchema = new Schema({
     categoryEntry: {type: String},
-    tasksEntry: {type: String}
-    // complete: {type: Boolean},
-    // delete: {type: Boolean}
+    tasksEntry: {type: String},
+    question_delete: {type: Boolean}
 });
 
 module.exports = mongoose.model('tasks', TasksSchema);

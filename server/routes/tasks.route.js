@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const Tasks = require('../model/tasks.schema');
 const tasksDataBase = require('../modules/tasksDataBase');
 
+
 router.get('/', (req, res) => {
     
     // ------- database read or find ------ //
@@ -36,6 +37,27 @@ router.post('/', (req, res) => {
         });
 });
 
+router.delete('/', (req, res) => {
+    Tasks.findAndRemoveTasks(req.query._id)
+        .then(() => {
+            res.sendStatus(200);
+        })
+        .catch((error) => {
+            console.log('error from delete', error);
+            res.sendStatus(500);
+        });
+});
+
+// router.put('/', (req, res) => {
+//     Tasks.findAndRemoveTasks(req.body._id, req.body)
+//         .then(() => {
+//             res.sendStatus(200);
+//         })
+//         .catch((error) => {
+//             console.log('error from put', error);
+//             res.sendStatus(500);
+//         });
+// });
 
 
 

@@ -26,13 +26,7 @@
             <input type="text" ng-model="vm.newTasks.categoryEntry" placeholder="Category" />
             <input type="text" ng-model="vm.newTasks.tasksEntry" placeholder="To Accomplish" />
 
-            <!-- <input id="completeButton" type="radio" ng-model="vm.newTasks.complete" ng-value="true" />Done -->
-            <!-- <input id="completeButton" type="radio" ng-model="vm.newTasks.complete" ng-value="false" />Soon -->
-
-            <button ng-click="vm.createTasksEntry()">enter</button>
-
-            <!-- <button ng-click="vm.createTasks(newTasks)">Create</button>
-            <button ng-click="vm.deleteTasks(newTasks)">Create</button> -->
+            <button ng-click="vm.createTasksEntry()">Enter</button>
         </div>
         <div id="tasksTable">
             <table>
@@ -41,8 +35,8 @@
                         <th>Category</th>
                         <th>To Accomplish</th>
                         <!-- <th>Done</th> -->
-                        <!-- <th>Save</th>
-                        <th>Delete</th> -->
+                        <!-- <th>Save</th> -->
+                        <!-- <th>Delete</th> -->
                     </tr>
                 </thread>
                 <tbody>
@@ -53,8 +47,15 @@
                         <td>
                             <input ng-model="tasks.tasksEntry">
                         </td>
-                        <!-- <td><button ng-click="vm.createTasks(newTasks)">Delete</button></td>
-                        <td><button ng-click="vm.createTasks(newTasks)">Save</button></td> -->
+                        <!-- <td>
+                            <input ng-model="tasks.question_delete"> ng-hide="tasks.question_delete == true"
+                        </td> -->
+                        <td>
+                            <button ng-click ="vm.deleteTasks(tasks)">Delete</button>
+                        </td>
+                        <!-- <td>
+                            <button ng-click="vm.completeButton(tasks)">Save</button>
+                        </td> -->
 
                     </tr>
                 </tbody>
