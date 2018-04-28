@@ -26,11 +26,13 @@
             <input type="text" ng-model="vm.newTasks.categoryEntry" placeholder="Category" />
             <input type="text" ng-model="vm.newTasks.tasksEntry" placeholder="To Accomplish" />
 
-            <input id="completeButton" type="radio" ng-model="vm.newTasks.complete" ng-value="true" />Done
+            <!-- <input id="completeButton" type="radio" ng-model="vm.newTasks.complete" ng-value="true" />Done -->
             <!-- <input id="completeButton" type="radio" ng-model="vm.newTasks.complete" ng-value="false" />Soon -->
 
-            <button ng-click="vm.createTasks(newTasks)">Create</button>
-            <button ng-click="vm.deleteTasks(newTasks)">Create</button>
+            <button ng-click="vm.createTasksEntry()">enter</button>
+
+            <!-- <button ng-click="vm.createTasks(newTasks)">Create</button>
+            <button ng-click="vm.deleteTasks(newTasks)">Create</button> -->
         </div>
         <div id="tasksTable">
             <table>
@@ -38,7 +40,7 @@
                     <tr>
                         <th>Category</th>
                         <th>To Accomplish</th>
-                        <th>Done</th>
+                        <!-- <th>Done</th> -->
                         <!-- <th>Save</th>
                         <th>Delete</th> -->
                     </tr>

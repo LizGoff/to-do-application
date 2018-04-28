@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const tasksSchema = new Schema({
+const TasksSchema = new Schema({
     categoryEntry: {type: String},
-    taskEntry: {type: String},
-    complete: {type: Boolean},
-    delete: {type: Boolean}
+    tasksEntry: {type: String}
+    // complete: {type: Boolean},
+    // delete: {type: Boolean}
 });
 
-module.exports = mongoose.model('tasks', tasksSchema);
+module.exports = mongoose.model('tasks', TasksSchema);
