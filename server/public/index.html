@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="vendor/bootstrap.css">
+    <title>Tasks To Accomplish</title>
+    <script src="vendor/angular.min.js" charset="utf-8"></script>
+    <script src="scripts/client.js"></script>
+
+</head>
+
+<body ng-app="TaskApp">
+
+    <main ng-controller="TaskController as vm">
+
+        <header>
+            <div>To Accomplish</div>
+        </header>
+
+        <div>
+            <input type="text" ng-model="vm.newTasks.categoryEntry" placeholder="Category" />
+            <input type="text" ng-model="vm.newTasks.tasksEntry" placeholder="To Accomplish" />
+
+            <input id="completeButton" type="radio" ng-model="vm.newTasks.complete" ng-value="true" />Done
+            <!-- <input id="completeButton" type="radio" ng-model="vm.newTasks.complete" ng-value="false" />Soon -->
+
+            <button ng-click="vm.createTasks(newTasks)">Create</button>
+            <button ng-click="vm.deleteTasks(newTasks)">Create</button>
+        </div>
+        <div id="tasksTable">
+            <table>
+                <thread>
+                    <tr>
+                        <th>Category</th>
+                        <th>To Accomplish</th>
+                        <th>Done</th>
+                        <!-- <th>Save</th>
+                        <th>Delete</th> -->
+                    </tr>
+                </thread>
+                <tbody>
+                    <tr ng-repeat="tasks in vm.tasksList">
+                        <td>
+                            <input ng-model="tasks.categoryEntry">
+                        </td>
+                        <td>
+                            <input ng-model="tasks.tasksEntry">
+                        </td>
+                        <!-- <td><button ng-click="vm.createTasks(newTasks)">Delete</button></td>
+                        <td><button ng-click="vm.createTasks(newTasks)">Save</button></td> -->
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+
+</html>
