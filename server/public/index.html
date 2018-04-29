@@ -16,27 +16,25 @@
 
 <body ng-app="TaskApp">
 
-    <main ng-controller="TaskController as vm">
+    <main id="toAccomplish" ng-submit="submit()" ng-controller="TaskController as vm">
 
         <header>
-            <div>To Accomplish</div>
+            <div><h1>To Accomplish</h1></div>
         </header>
+        <form>
+            <div>
+            <input type="text" ng-submit="categoryEntry" ng-model="vm.newTasks.categoryEntry" placeholder="Category" />
+            <input type="text" ng-submit="taskEntry" ng-model="vm.newTasks.tasksEntry" placeholder="To Accomplish" />
 
-        <div>
-            <input type="text" ng-model="vm.newTasks.categoryEntry" placeholder="Category" />
-            <input type="text" ng-model="vm.newTasks.tasksEntry" placeholder="To Accomplish" />
-
-            <button ng-click="vm.createTasksEntry()">Enter</button>
-        </div>
+            <button ng-click="vm.createTasksEntry()">Add</button>
+            </div>
+        </form>
         <div id="tasksTable">
             <table>
                 <thread>
                     <tr>
                         <th>Category</th>
                         <th>To Accomplish</th>
-                        <!-- <th>Done</th> -->
-                        <!-- <th>Save</th> -->
-                        <!-- <th>Delete</th> -->
                     </tr>
                 </thread>
                 <tbody>
@@ -47,14 +45,16 @@
                         <td>
                             <input ng-model="tasks.tasksEntry">
                         </td>
-                        <!-- <td>
-                            <input ng-model="tasks.question_delete"> ng-hide="tasks.question_delete == true"
-                        </td> -->
                         <td>
-                            <button ng-click ="vm.deleteTasks(tasks)">Delete</button>
+                            <button ng-model="tasks.completed" ng-click="vm.completeButton(tasks)">Accomplished!</button>
                         </td>
-                        <!-- <td>
-                            <button ng-click="vm.completeButton(tasks)">Save</button>
+
+                        <td>
+                            <button ng-click="vm.deleteTasks(tasks)">Delete</button>
+                        </td>
+                        <!-- <td role="alert">
+                                <span class="error" ng-show="toAccomplish.deleteTasks.$error.required">
+                                 Confirm Delete</span>
                         </td> -->
 
                     </tr>

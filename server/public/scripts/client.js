@@ -1,12 +1,19 @@
 
 var app = angular.module('TaskApp', []);
 
+
+
 app.controller('TaskController', ['$http', function($http) {
     console.log('TaskController Loaded');
     
     var self = this;
     self.tasksList = [];
-    self.newTasks = {};
+    self.newTasks = {
+        categoryEntry: '',
+        tasksEntry: '',
+        completed: false
+    
+    };
 
     self.getTasksEntry = function() {
         $http({
@@ -53,21 +60,23 @@ app.controller('TaskController', ['$http', function($http) {
         });
     }
 
-    // self.completeButton = function(completeUpdateSave) {
-    //     console.log(self.newTasks);
-    //     $http({
-    //         method: "PUT",
-    //         url: "/tasks",
-    //         data: completeUpdateSave
-    //     })
-    //     .then(function(response) {
-    //         self.getTasksEntry();
-    //         console.log('response from put', response);
-    //     })
-    //     .catch(function(error) {
-    //         console.log('error on /tasks PUT', error);
-    //     });
-    // }
+    self.completeButton = function(completeUpdateSave) {
+        console.log(self.newTasks);    
+        completeUpdateSave.completed = true
+        $http({
+            method: "PUT",
+            url: "/tasks",
+            data: completeUpdateSave
+        })
+        .then(function(response) {
+            
+            self.getTasksEntry();
+            console.log('completed in database', response);
+        })
+        .catch(function(error) {
+            console.log('error on /tasks PUT', error);
+        });
+    }
 
     self.getTasksEntry();
 
