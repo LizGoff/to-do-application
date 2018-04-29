@@ -30,18 +30,20 @@
 
                     <table>
                         <tbody>
-                            <td>
-                                <input require="required" id="entryOfCategory" ng-submit="categoryEntry" type="text" ng-model="vm.newTasks.categoryEntry" placeholder="Category" />
-                            </td>
+                            <tr>
+                                <td>
+                                    <input id="entryOfCategory" type="text" ng-model="vm.newTasks.categoryEntry" placeholder="Category" />
+                                </td>
 
-                            <td>
-                                <input require="required" id="entryOfTasks" ng-submit="taskEntry" type="text" ng-model="vm.newTasks.tasksEntry" placeholder="To Accomplish" />
-                            </td>
-                            <!-- use ng-submit="categoryEntry" and ng-submit="taskEntry" to just hit enter for submission of tasks-->
-                            <td>
-                                <button id="enterButtonOfTasks" ng-click="vm.createTasksEntry()">Add</button>
-                            </td>
+                                <td>
+                                    <input id="entryOfTasks" type="text" ng-model="vm.newTasks.tasksEntry" placeholder="To Accomplish" />
+                                    <!-- use ng-submit="categoryEntry" and ng-submit="taskEntry" to just hit enter for submission of tasks-->
+                                </td>
 
+                                <td>
+                                    <button id="enterButtonOfTasks" ng-click="vm.createTasksEntry()">Add</button>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
