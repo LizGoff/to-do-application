@@ -16,51 +16,56 @@
 
 <body ng-app="TaskApp">
 
-    <main id="toAccomplish" ng-submit="submit()" ng-controller="TaskController as vm">
+    <main id="toAccomplish" ng-controller="TaskController as vm">
+        <!-- add ng-submit="submit()" to main body -->
+        <form class="form-group col-md-6">
+            <header>
+                <div>
+                    <h1>To Accomplish</h1>
+                </div>
+            </header>
 
-        <header>
-            <div><h1>To Accomplish</h1></div>
-        </header>
-        <form>
             <div>
-            <input type="text" ng-submit="categoryEntry" ng-model="vm.newTasks.categoryEntry" placeholder="Category" />
-            <input type="text" ng-submit="taskEntry" ng-model="vm.newTasks.tasksEntry" placeholder="To Accomplish" />
+                <input type="text" ng-model="vm.newTasks.categoryEntry" placeholder="Category" />
+                <input type="text" ng-model="vm.newTasks.tasksEntry" placeholder="To Accomplish" />
+                <!-- use ng-submit="categoryEntry" and ng-submit="taskEntry" to just hit enter for submission of tasks-->
 
-            <button ng-click="vm.createTasksEntry()">Add</button>
+                <button ng-click="vm.createTasksEntry()">Add</button>
             </div>
-        </form>
-        <div id="tasksTable">
-            <table>
-                <thread>
-                    <tr>
-                        <th>Category</th>
-                        <th>To Accomplish</th>
-                    </tr>
-                </thread>
-                <tbody>
-                    <tr ng-repeat="tasks in vm.tasksList">
-                        <td>
-                            <input ng-model="tasks.categoryEntry">
-                        </td>
-                        <td>
-                            <input ng-model="tasks.tasksEntry">
-                        </td>
-                        <td>
-                            <button ng-model="tasks.completed" ng-click="vm.completeButton(tasks)">Accomplished!</button>
-                        </td>
 
-                        <td>
-                            <button ng-click="vm.deleteTasks(tasks)">Delete</button>
-                        </td>
-                        <!-- <td role="alert">
+            <div id="tasksTable">
+                <table>
+                    <thread>
+                        <tr>
+                            <th>Category</th>
+                            <th>To Accomplish</th>
+                        </tr>
+                    </thread>
+                    <tbody>
+                        <tr ng-repeat="tasks in vm.tasksList">
+                            <td>
+                                <input ng-model="tasks.categoryEntry">
+                            </td>
+                            <td>
+                                <input ng-model="tasks.tasksEntry">
+                            </td>
+                            <td>
+                                <button ng-model="tasks.completed" ng-click="vm.completeButton(tasks)">Done</button>
+                            </td>
+
+                            <td>
+                                <button ng-click="vm.deleteTasks(tasks)">Delete</button>
+                            </td>
+                            <!-- <td role="alert">
                                 <span class="error" ng-show="toAccomplish.deleteTasks.$error.required">
                                  Confirm Delete</span>
                         </td> -->
 
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </form>
     </main>
 </body>
 
