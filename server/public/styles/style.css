@@ -9,21 +9,108 @@ body {
 }
 
 #top {
-    padding: 30px;
+    padding: 20px;
     text-align: left;
     color: black;
 }
 
+#labelText {
+    margin: 0px 20px 0px 30px;
+    padding: 30px;
+    color: black;
+}
+
 #entryOfCategory {
-    margin-left: 20px;
+    background: silver;
+    border-color: silver;
+    border-style: solid;
+    border-radius: 15%;
+    display: inline-block;
+    margin: 0px 20px 0px 50px;
+    height: 30px;
+    width: 100px;
+    color: 	black;
+    text-align: center;
+
 }
 
 #entryOfTasks {
-    margin-left: 20px;
+    background: silver;
+    border-color: silver;
+    border-style: solid;
+    border-radius: 10%;
+    display: inline-block;
+    margin: 0px 20px 0px 0px;
+    height: 30px;
+    width: 200px;
+    color: 	black;
+    text-align: center;
+}
+
+
+#tasksTable {
+    padding: 20px;
+}
+
+#enterButtonOfTasks {
+    background: silver;
+    border-radius: 15%;
+    display: inline-block;
+    margin: 0px 20px 0px 90px;
+    height: 30px;
+    width: 80px;
+    color: 	black;
+}
+
+#goAway {
+    background: silver;
+    border-color: silver;
+    border-style: solid;
+    border-radius: 25%;
+    display: inline-block;
+    margin: 5px;
+    height: 25px;
+    width: 80px;
+    color: 	black;
+}
+
+#categoryToDo {
+    border-color: silver;
+    border-style: solid;
+    border-radius: 25%;
+    display: inline-block;
+    margin: 0px 20px 0px 30px;
+    height: 25px;
+    width: 100px;
+    color: 	black;
+    text-align: center;
+
+}
+
+#toDo {
+    border-color: silver;
+    border-style: solid;
+    border-radius: 25%;
+    display: inline-block;
+    margin: 0px 1px 0px 5px;
+    height: 25px;
+    width: 200px;
+    color: 	black;
+    text-align: center;
+
+}
+
+#done {
+    margin: 0px 0px 0px 40px;
+
+    width: 50px;
+    text-align: center;
+
+
 }
 
 input[type="checkbox"] {
-    filter: invert(100%) hue-rotate(18deg) brightness(1.7);
+    filter: invert(90%) hue-rotate(09deg) brightness(1.5);
   }
 
 .notDone{
@@ -32,7 +119,7 @@ input[type="checkbox"] {
 
 
 .done{
-    background: silver;
+    background: #696969;
 } 
 
 /* .dot {

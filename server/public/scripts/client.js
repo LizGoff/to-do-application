@@ -36,6 +36,8 @@ app.controller('TaskController', ['$http', function($http) {
             data: self.newTasks
         }) 
         .then(function (response) {
+            self.newTasks.categoryEntry = '';
+            self.newTasks.tasksEntry = '';
             self.getTasksEntry();
             console.log(response);
         })
@@ -62,7 +64,7 @@ app.controller('TaskController', ['$http', function($http) {
 
     self.completeButton = function(completeUpdateSave) {
         console.log(self.newTasks);    
-        completeUpdateSave.completed = true
+        completeUpdateSave.completed = true;
         $http({
             method: "PUT",
             url: "/tasks",
