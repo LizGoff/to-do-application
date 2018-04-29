@@ -19,52 +19,66 @@
     <main id="toAccomplish" ng-controller="TaskController as vm">
         <!-- add ng-submit="submit()" to main body -->
         <form class="form-group col-md-6">
-            <header>
-                <div>
+
+            <header id="header">
+                <div id="top">
                     <h1>To Accomplish</h1>
                 </div>
             </header>
 
-            <div>
-                <input type="text" ng-model="vm.newTasks.categoryEntry" placeholder="Category" />
-                <input type="text" ng-model="vm.newTasks.tasksEntry" placeholder="To Accomplish" />
-                <!-- use ng-submit="categoryEntry" and ng-submit="taskEntry" to just hit enter for submission of tasks-->
+            <div class="form-group row">
+                <input id="entryOfCategory" type="text" ng-model="vm.newTasks.categoryEntry" placeholder="Category" />
+            </div>
 
+            <div class="form-group row">
+                <input id="entryOfTasks" type="text" ng-model="vm.newTasks.tasksEntry" placeholder="To Accomplish" />
+                <!-- use ng-submit="categoryEntry" and ng-submit="taskEntry" to just hit enter for submission of tasks-->
+            </div>
+
+            <div>
                 <button ng-click="vm.createTasksEntry()">Add</button>
             </div>
 
-            <div id="tasksTable">
-                <table>
-                    <thread>
-                        <tr>
-                            <th>Category</th>
-                            <th>To Accomplish</th>
-                        </tr>
-                    </thread>
-                    <tbody>
-                        <tr ng-repeat="tasks in vm.tasksList">
-                            <td>
-                                <input ng-model="tasks.categoryEntry">
-                            </td>
-                            <td>
-                                <input ng-model="tasks.tasksEntry">
-                            </td>
-                            <td>
-                                <button ng-model="tasks.completed" ng-click="vm.completeButton(tasks)">Done</button>
-                            </td>
+            <section>
+                <div id="tasksTable">
 
-                            <td>
-                                <button ng-click="vm.deleteTasks(tasks)">Delete</button>
-                            </td>
-                            <!-- <td role="alert">
+                    <table>
+
+                        <thread>
+                            <tr>
+                                <th>Category</th>
+                                <th>To Accomplish</th>
+                                <th>Accomplished!</th>
+                            </tr>
+                        </thread>
+
+                        <tbody>
+                            <tr ng-repeat="tasks in vm.tasksList"  >
+                                <td>
+                                    <input ng-class="{'done': tasks.completed == true, 'notDone': tasks.completed == false}" ng-model="tasks.categoryEntry">
+                                </td>
+                                <td>
+                                    <input ng-class="{'done': tasks.completed == true, 'notDone': tasks.completed == false}" ng-model="tasks.tasksEntry">
+                                </td>
+                                <td>
+                                    <input type="checkbox" ng-model= "tasks.completed" ng-click="vm.completeButton(tasks)" />
+                                </td>
+
+                                <td>
+                                    <button ng-click="vm.deleteTasks(tasks)">Delete</button>
+                                </td>
+                                <!-- <td role="alert">
                                 <span class="error" ng-show="toAccomplish.deleteTasks.$error.required">
                                  Confirm Delete</span>
-                        </td> -->
+                                </td> -->
+                            </tr>
+                        </tbody>
 
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                    </table>
+
+                </div>
+            </section>
+            
         </form>
     </main>
 </body>

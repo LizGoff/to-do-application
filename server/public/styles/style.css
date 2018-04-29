@@ -1,4 +1,89 @@
 body {
-    background: aliceblue;
-    color: #696969;
+    width: 100%;
+    height: 100%;
+    background: url('IMG_7585.jpg');
+    background-size:cover; 
+    background-repeat: no-repeat;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+
 }
+
+#top {
+    padding: 30px;
+    text-align: left;
+    color: black;
+}
+
+#entryOfCategory {
+    margin-left: 20px;
+}
+
+#entryOfTasks {
+    margin-left: 20px;
+}
+
+input[type="checkbox"] {
+    filter: invert(100%) hue-rotate(18deg) brightness(1.7);
+  }
+
+.notDone{
+    background: aliceblue;
+  }
+
+
+.done{
+    background: silver;
+} 
+
+/* .dot {
+    height: 130px;
+    width: 130px;
+    background: url('greenfur.png');
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#secondDot {
+    height: 25px;
+    width: 25px;
+    background: url('white.png');
+    border-radius: 50%;
+    display: inline-block;
+    padding: 10px;
+    margin: 30px;
+
+}
+
+#topOfPage {
+    width: 100%;
+    height: 100%;
+    background: url('white.png');
+    padding: 10px;
+    margin: 20px 10px 10px 10px;
+}
+#top {
+    padding: 30px;
+    margin-left: 77px;
+}
+
+h1 {
+    color: black;
+    padding: 10px;
+}
+
+#pushList {
+    width: 100%;
+    height: 100%;
+    background: url('white.png');
+    padding: 10px;
+    margin: 20px 10px 10px 10px;
+}
+
+footer {
+    width: 100%;
+    height: 100%;
+    background: url('white.png');
+    padding: 20px;
+    margin: 20px 10px 10px 10px;
+    font: 16px;
+} */
