@@ -53,10 +53,10 @@ app.controller('TaskController', ['$http', function($http) {
 
     self.deleteTasks = function(deleteTasks) {
         console.log(self.newTasks);
-        if(confirm('Are you sure?')) {
-            // request to server to delete this task
-            // try Modal in bootstrap for prettier alerts
-        }
+        // if(confirm('Are you sure?')) {
+        //     // request to server to delete this task
+        //     // try Modal in bootstrap for prettier alerts
+        // }
         $http({
             method: "DELETE",
             url: "/tasks",
