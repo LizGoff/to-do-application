@@ -8,9 +8,9 @@ app.controller('TaskController', ['$http', function($http) {
     self.tasksList = [];
     self.newTasks = {
         categoryEntry: '',
-        priority: '',
+        priority: 'Low',
         tasksEntry: '',
-        // due_date:
+        // due_date: new Date(),
         completed: false
     };
 
@@ -47,6 +47,10 @@ app.controller('TaskController', ['$http', function($http) {
 
     self.deleteTasks = function(deleteTasks) {
         console.log(self.newTasks);
+        if(confirm('Are you sure?')) {
+            // request to server to delete this task
+            // try Modal in bootstrap
+        }
         $http({
             method: "DELETE",
             url: "/tasks",
