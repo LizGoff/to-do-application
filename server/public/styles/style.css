@@ -69,7 +69,9 @@ body {
 }
 
 #tasksUrgencyLevel {
-    
+    margin: 0px 25px 0px 10px;
+    background: rgb(235, 119, 65);
+    border-color: rgb(137, 161, 29);
 }
 
 #tasksTable {
