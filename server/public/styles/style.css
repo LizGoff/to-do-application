@@ -14,20 +14,20 @@ body {
 #textHeader {
     padding: 20px;
     text-align: left;
-    font-family: Courier;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(231, 79, 8);
     margin: 0px 20px 0px 10px;
     padding: 30px;
-
 }
 
 #labelText {
     padding: 40px;
     font-family: Courier;
-    color: black;
+    color: rgb(109, 133, 5);
 }
 
 #entryOfCategory {
-    background: rgb(231, 79, 8);
+    background: rgb(235, 119, 65);
     border-color: rgb(137, 161, 29);
     border-style: solid;
     border-radius: 25px;
@@ -41,7 +41,7 @@ body {
 }
 
 #entryOfTasks {
-    background: rgb(231, 79, 8);
+    background: rgb(235, 119, 65);
     border-color: rgb(137, 161, 29);
     border-style: solid;
     border-radius: 25px;
@@ -70,6 +70,7 @@ body {
 #tasksTable {
     padding: 20px;
     font-family: Courier;
+    color: rgb(231, 79, 8);
 }
 
 #categoryToDo {
@@ -125,11 +126,11 @@ input[type="checkbox"] {
   }
 
 .notDone{
-    background: rgb(231, 79, 8);
+    background: rgb(235, 119, 65);
   }
 
 
 .done{
-    background: rgb(137, 161, 29);
+    background: rgb(165, 182, 88);
 } 
 
