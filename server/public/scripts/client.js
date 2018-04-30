@@ -64,7 +64,7 @@ app.controller('TaskController', ['$http', function($http) {
 
     self.completeButton = function(completeUpdateSave) {
         console.log(self.newTasks);    
-        completeUpdateSave.completed = true;
+        // completeUpdateSave.completed = !completeUpdateSave.completed;
         $http({
             method: "PUT",
             url: "/tasks",
