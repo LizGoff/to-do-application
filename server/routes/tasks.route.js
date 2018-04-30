@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
     
     // ------- database read or find ------ //
 
-    Tasks.find({})
+    Tasks.find({}).sort('completed')
         .then((tasksDatabase) => {
             console.log('data from database', tasksDatabase);
             res.send(tasksDatabase);

@@ -10,6 +10,7 @@ app.controller('TaskController', ['$http', function($http) {
         categoryEntry: '',
         priority: '',
         tasksEntry: '',
+        // due_date:
         completed: false
     };
 
