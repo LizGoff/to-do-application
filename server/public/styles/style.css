@@ -68,6 +68,10 @@ body {
     font-family: Courier;
 }
 
+#tasksUrgencyLevel {
+    
+}
+
 #tasksTable {
     padding: 20px;
     font-family: Courier;

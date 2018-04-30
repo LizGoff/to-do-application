@@ -1,8 +1,6 @@
 
 var app = angular.module('TaskApp', []);
 
-
-
 app.controller('TaskController', ['$http', function($http) {
     console.log('TaskController Loaded');
     
@@ -11,8 +9,8 @@ app.controller('TaskController', ['$http', function($http) {
     self.newTasks = {
         categoryEntry: '',
         tasksEntry: '',
+        // priority: '',
         completed: false
-    
     };
 
     self.getTasksEntry = function() {
@@ -71,7 +69,6 @@ app.controller('TaskController', ['$http', function($http) {
             data: completeUpdateSave
         })
         .then(function(response) {
-            
             self.getTasksEntry();
             console.log('completed in database', response);
         })

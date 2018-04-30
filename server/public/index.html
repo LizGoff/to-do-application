@@ -36,8 +36,14 @@
                                 </td>
                                 <td>
                                     <input required id="entryOfTasks" type="text" ng-model="vm.newTasks.tasksEntry" placeholder="To Accomplish" required/>
-                                    <!-- use ng-submit="categoryEntry" and ng-submit="taskEntry" to just hit enter for submission of tasks-->
                                 </td>
+                                <!-- <td>
+                                    <select id="tasksUrgencyLevel" type="text" ng-model="vm.newTasks.priority">
+                                        <option value='Low'>Low</option>
+                                        <option value='Med'>Med</option>
+                                        <option value='High'>High</option>
+                                    </select>
+                                </td> -->
                                 <td>
                                     <button id="enterButtonOfTasks" ng-click="vm.createTasksEntry()">Add</button>
                                 </td>
@@ -46,7 +52,7 @@
                     </table>
                 </section>
             </div>
-            <div id="tasksTable" class='row'></div>>
+            <div id="tasksTable" class='row'></div>
             <table>
                 <thread>
                     <tr>
