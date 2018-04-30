@@ -45,11 +45,17 @@ app.controller('TaskController', ['$http', function($http) {
         });
     };
 
+    // (This is how Kris did the toggle in class)
+    // self.toggleCompleteness + function(theTask) {
+    //     theTask.complete = !theTask.complete
+    //     (other stuff. Check lecture notes)
+    // }
+
     self.deleteTasks = function(deleteTasks) {
         console.log(self.newTasks);
         if(confirm('Are you sure?')) {
             // request to server to delete this task
-            // try Modal in bootstrap
+            // try Modal in bootstrap for prettier alerts
         }
         $http({
             method: "DELETE",
