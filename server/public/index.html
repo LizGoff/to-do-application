@@ -11,85 +11,74 @@
     <title>Tasks To Accomplish</title>
     <script src="vendor/angular.min.js" charset="utf-8"></script>
     <script src="scripts/client.js"></script>
-
 </head>
 
 <body ng-app="TaskApp">
     <div id="photoSetOne">
     </div>
-
-    <main id="toAccomplish" ng-controller="TaskController as vm">
+    <main id="toAccomplish" ng-controller="TaskController as vm" class='container fluid'>
         <!-- add ng-submit="submit()" to main body -->
         <form class="form-group col-md-6">
-
-            <header id="header">
-                <div id="top">
-                    <h1 id="textHeader">To Accomplish</h1>
-                </div>
-            </header>
-            <section>
-                <div id="tasksEntryLine">
-
+            <div class='row'>
+                <header id="header">
+                    <div id="top">
+                        <h1 id="textHeader">To Accomplish</h1>
+                    </div>
+                </header>
+            </div>
+            <div class='row'>
+                <section id="tasksEntryLine">
                     <table>
                         <tbody>
                             <tr>
                                 <td>
                                     <input id="entryOfCategory" type="text" ng-model="vm.newTasks.categoryEntry" placeholder="Category" required/>
                                 </td>
-
                                 <td>
                                     <input required id="entryOfTasks" type="text" ng-model="vm.newTasks.tasksEntry" placeholder="To Accomplish" required/>
                                     <!-- use ng-submit="categoryEntry" and ng-submit="taskEntry" to just hit enter for submission of tasks-->
                                 </td>
-
                                 <td>
                                     <button id="enterButtonOfTasks" ng-click="vm.createTasksEntry()">Add</button>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                </div>
+                </section>
+            </div>
+            <div id="tasksTable" class='row'></div>>
+            <table>
+                <thread>
+                    <tr>
+                        <th id="labelText">Category</th>
+                        <th id="labelText">To Accomplish</th>
+                        <th id="labelText">Done</th>
+                    </tr>
+                </thread>
+                <tbody>
+                    <tr ng-repeat="tasks in vm.tasksList">
+                        <td>
+                            <input id="categoryToDo" ng-class="{'done': tasks.completed == true, 'notDone': tasks.completed == false}" ng-model="tasks.categoryEntry">
+                        </td>
+                        <td>
+                            <input id="toDo" ng-class="{'done': tasks.completed == true, 'notDone': tasks.completed == false}" ng-model="tasks.tasksEntry">
+                        </td>
+                        <td>
+                            <input id="done" type="checkbox" ng-model="tasks.completed" ng-click="vm.completeButton(tasks)" />
+                        </td>
 
-                <section>
-                    <div id="tasksTable">
-
-                        <table>
-
-                            <thread>
-                                <tr>
-                                    <th id="labelText">Category</th>
-                                    <th id="labelText">To Accomplish</th>
-                                    <th id="labelText">Done</th>
-                                </tr>
-                            </thread>
-
-                            <tbody>
-                                <tr ng-repeat="tasks in vm.tasksList">
-                                    <td>
-                                        <input id="categoryToDo" ng-class="{'done': tasks.completed == true, 'notDone': tasks.completed == false}" ng-model="tasks.categoryEntry">
-                                    </td>
-                                    <td>
-                                        <input id="toDo" ng-class="{'done': tasks.completed == true, 'notDone': tasks.completed == false}" ng-model="tasks.tasksEntry">
-                                    </td>
-                                    <td>
-                                        <input id="done" type="checkbox" ng-model="tasks.completed" ng-click="vm.completeButton(tasks)" />
-                                    </td>
-
-                                    <td>
-                                        <button id="goAway" ng-click="vm.deleteTasks(tasks)">Delete</button>
-                                    </td>
-                                    <!-- <td role="alert">
+                        <td>
+                            <button id="goAway" ng-click="vm.deleteTasks(tasks)">Delete</button>
+                        </td>
+                        <!-- <td role="alert">
                                 <span class="error" ng-show="toAccomplish.deleteTasks.$error.required">
                                  Confirm Delete</span>
                                 </td> -->
-                                </tr>
-                            </tbody>
-
-                        </table>
-
-                    </div>
-                </section>
-
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            </section>
         </form>
     </main>
 </body>
