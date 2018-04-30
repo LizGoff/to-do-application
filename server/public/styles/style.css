@@ -1,15 +1,8 @@
 body {
-    /* width: 100%;
-    height: 100%; */
-    background: url('IMG_7585.jpg');
-    background-size:cover; 
+    width: 100%;
+    background: url('IMG_3415.jpeg');
     background-repeat: no-repeat;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-    display: block;
-    max-width:230px;
-    max-height:95px;
-    width: auto;
-    height: auto;
+    background-position: 150% -20%; 
 }
 
 #top {
@@ -18,100 +11,113 @@ body {
     color: black;
 }
 
-#labelText {
-    margin: 0px 20px 0px 30px;
+#textHeader {
+    padding: 20px;
+    text-align: left;
+    font-family: Courier;
+    margin: 0px 20px 0px 10px;
     padding: 30px;
+
+}
+
+#labelText {
+    padding: 40px;
+    font-family: Courier;
     color: black;
 }
 
 #entryOfCategory {
-    background-color: silver;
-    border-color: #696969;
+    background: rgb(231, 79, 8);
+    border-color: rgb(137, 161, 29);
     border-style: solid;
-    border-radius: 15%;
+    border-radius: 25px;
     display: inline-block;
     margin: 0px 20px 0px 50px;
     height: 30px;
     width: 100px;
     color: 	black;
     text-align: center;
-
+    font-family: Courier;
 }
 
 #entryOfTasks {
-    background-color: silver;
-    border-color: #696969;
+    background: rgb(231, 79, 8);
+    border-color: rgb(137, 161, 29);
     border-style: solid;
-    border-radius: 10%;
+    border-radius: 25px;
     display: inline-block;
     margin: 0px 20px 0px 0px;
     height: 30px;
     width: 200px;
     color: 	black;
     text-align: center;
+    font-family: Courier;
 }
 
 #enterButtonOfTasks {
-    background-color: silver;
-    border-color: #696969;
+    background: rgb(231, 79, 8);
+    border-color: rgb(137, 161, 29);
     border-style: solid;
-    border-radius: 15%;
+    border-radius: 25px;
     display: inline-block;
     margin: 5px;
     height: 25px;
     width: 80px;
     color: 	black;
+    font-family: Courier;
 }
 
 #tasksTable {
     padding: 20px;
+    font-family: Courier;
 }
 
 #categoryToDo {
-    border-color: 	#696969;
+    border-color: rgb(137, 161, 29);
     border-style: solid;
-    border-radius: 15%;
+    border-radius: 25px;
     display: inline-block;
     margin: 0px 20px 0px 30px;
     height: 25px;
     width: 100px;
     color: 	black;
     text-align: center;
-
+    font-family: Courier;
 }
 
 #toDo {
-    border-color: #696969;
+    border-color: rgb(137, 161, 29);
     border-style: solid;
-    border-radius: 10%;
+    border-radius: 25px;
     display: inline-block;
     margin: 0px 1px 0px 5px;
     height: 25px;
     width: 200px;
     color: 	black;
     text-align: center;
-
+    font-family: Courier;
 }
 
 #goAway {
-    background: #696969;
-    border-color: #696969;
+    background: rgb(231, 79, 8);
+    border-color: rgb(137, 161, 29);
     border-style: solid;
-    border-radius: 25%;
+    border-radius: 25px;
     display: inline-block;
     margin: 5px;
     height: 25px;
     width: 80px;
     color: 	black;
+    font-family: Courier;
 }
 
 #done {
+    background: rgb(231, 79, 8);
+    border-color: rgb(137, 161, 29);
     margin: 0px 0px 0px 40px;
-
     width: 50px;
     text-align: center;
-
-
+    font-family: Courier;
 }
 
 input[type="checkbox"] {
@@ -119,63 +125,11 @@ input[type="checkbox"] {
   }
 
 .notDone{
-    background: silver;
+    background: rgb(231, 79, 8);
   }
 
 
 .done{
-    background: #696969;
+    background: rgb(137, 161, 29);
 } 
 
-/* .dot {
-    height: 130px;
-    width: 130px;
-    background: url('greenfur.png');
-    border-radius: 50%;
-    display: inline-block;
-}
-
-#secondDot {
-    height: 25px;
-    width: 25px;
-    background: url('white.png');
-    border-radius: 50%;
-    display: inline-block;
-    padding: 10px;
-    margin: 30px;
-
-}
-
-#topOfPage {
-    width: 100%;
-    height: 100%;
-    background: url('white.png');
-    padding: 10px;
-    margin: 20px 10px 10px 10px;
-}
-#top {
-    padding: 30px;
-    margin-left: 77px;
-}
-
-h1 {
-    color: black;
-    padding: 10px;
-}
-
-#pushList {
-    width: 100%;
-    height: 100%;
-    background: url('white.png');
-    padding: 10px;
-    margin: 20px 10px 10px 10px;
-}
-
-footer {
-    width: 100%;
-    height: 100%;
-    background: url('white.png');
-    padding: 20px;
-    margin: 20px 10px 10px 10px;
-    font: 16px;
-} */
