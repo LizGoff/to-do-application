@@ -17,7 +17,6 @@
     <div id="photoSetOne">
     </div>
     <main id="toAccomplish" ng-controller="TaskController as vm" class='container fluid'>
-        <!-- add ng-submit="submit()" to main body -->
         <form class="form-group col-md-6">
             <div class='row'>
                 <header id="header">
@@ -37,13 +36,13 @@
                                 <td>
                                     <input required id="entryOfTasks" type="text" ng-model="vm.newTasks.tasksEntry" placeholder="To Accomplish" required/>
                                 </td>
-                                <!-- <td>
-                                    <select id="tasksUrgencyLevel" type="text" ng-model="vm.newTasks.priority">
+                                <td>
+                                    <select id="tasksUrgencyLevel" ng-model="vm.newTasks.priority">
                                         <option value='Low'>Low</option>
                                         <option value='Med'>Med</option>
                                         <option value='High'>High</option>
                                     </select>
-                                </td> -->
+                                </td>
                                 <td>
                                     <button id="enterButtonOfTasks" ng-click="vm.createTasksEntry()">Add</button>
                                 </td>

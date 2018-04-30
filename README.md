@@ -15,6 +15,8 @@
 # </form>
 
 #   <input type="date" ng-model='vm.newTasks.due_date"/> (calendar)
+# use angular to fix long timeline. apply filter -  | date: "MM-dd-yyyy" (called a date object)
+# | currency  | date - there are many (It is ONLY a visual change)
 
 # look into class="btn btn-primary ng-click='addTasks()'" 
 # banner class="jumbotron"

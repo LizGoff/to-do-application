@@ -8,8 +8,8 @@ app.controller('TaskController', ['$http', function($http) {
     self.tasksList = [];
     self.newTasks = {
         categoryEntry: '',
+        priority: '',
         tasksEntry: '',
-        // priority: '',
         completed: false
     };
 
