@@ -1,5 +1,3 @@
-// use kochab_tasksList or kochab_ whatever here
-
 const mongoose = require('mongoose'); 
 const databaseUrl = process.MONGODB_URI || 'mongodb://localhost:27017/tasksList';
 mongoose.connect(databaseUrl);

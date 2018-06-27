@@ -4,12 +4,7 @@ const mongoose = require('mongoose');
 const Tasks = require('../model/tasks.schema');
 const tasksDataBase = require('../modules/tasksDataBase');
 
-
-
 router.get('/', (req, res) => {
-    
-    // ------- database read or find ------ //
-
     Tasks.find({}).sort('completed')
         .then((tasksDatabase) => {
             console.log('data from database', tasksDatabase);
@@ -23,11 +18,7 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-
-    // ------- database read or find ------ //
-    // data from client become req.body
     const tasksToAdd = req.body;
-    // console.log(tasksToAdd);
     Tasks.create(tasksToAdd)
         .then(() => {
             res.sendStatus(200);

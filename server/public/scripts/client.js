@@ -1,4 +1,3 @@
-
 var app = angular.module('TaskApp', []);
 
 app.controller('TaskController', ['$http', function ($http) {
@@ -6,17 +5,13 @@ app.controller('TaskController', ['$http', function ($http) {
 
     var self = this;
     self.tasksList = [];
-
-    // self.resetNewTask = function () {
         self.newTasks = {
             categoryEntry: '',
             priority: 'Low',
             tasksEntry: '',
-            // due_date: new Date(),
             completed: false
         };
-    // };
-
+    
     self.getTasksEntry = function () {
         $http({
             method: 'GET',
@@ -48,18 +43,7 @@ app.controller('TaskController', ['$http', function ($http) {
             });
     };
 
-    // (This is how Kris did the toggle in class)
-    // self.toggleCompleteness + function(theTask) {
-    //     theTask.complete = !theTask.complete
-    //     (other stuff. Check lecture notes)
-    // }
-
     self.deleteTasks = function (deleteTasks) {
-        console.log(self.newTasks);
-        // if(confirm('Are you sure?')) {
-        //     // request to server to delete this task
-        //     // try Modal in bootstrap for prettier alerts
-        // }
         $http({
             method: "DELETE",
             url: "/tasks",
@@ -75,8 +59,6 @@ app.controller('TaskController', ['$http', function ($http) {
     }
 
     self.completeButton = function (completeUpdateSave) {
-        console.log(self.newTasks);
-        // completeUpdateSave.completed = !completeUpdateSave.completed;
         $http({
             method: "PUT",
             url: "/tasks",
@@ -91,8 +73,6 @@ app.controller('TaskController', ['$http', function ($http) {
             });
     }
 
-
-    //self.init = 
     self.getTasksEntry();
 
 }]);
